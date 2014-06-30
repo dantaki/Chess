@@ -15,7 +15,7 @@ use warnings;
 #####
 
 
-open IN, "/Users/dantaki/Desktop/kasparov/kasparov_white_wins.txt";
+open IN, "/Users/dantaki/Desktop/kasparov/kasparov_white_win.txt";
 
 my $header = <IN>;
 
@@ -31,7 +31,7 @@ my ($queen,$rook,$bishop,$knight) = &positionHopper(@toHopper);
 
 &whiteMatrix(\%$queen,\%$rook,\%$bishop,\%$knight);
 
-open IN, "/Users/dantaki/Desktop/kasparov/kasparov_black_wins.txt";
+open IN, "/Users/dantaki/Desktop/kasparov/kasparov_black_win.txt";
 
 $header = <IN>;
 
