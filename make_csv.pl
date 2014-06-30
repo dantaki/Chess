@@ -107,11 +107,17 @@ sub whiteMatrix {
 		if ($k == 7) { $outk = "g"; }
 		if ($k == 8) { $outk = "h"; }
 			my $key = join "", $outk,$i;
-			
-			print OUT1 $queen{$key}.",";
-			print OUT2 $rook{$key}.",";
-			print OUT3 $bishop{$key}.",";
-			print OUT4 $knight{$key}.",";
+			unless( $k == 8) {
+				print OUT1 $queen{$key}.",";
+				print OUT2 $rook{$key}.",";
+				print OUT3 $bishop{$key}.",";
+				print OUT4 $knight{$key}.",";
+			} else {
+				print OUT1 $queen{$key};
+				print OUT2 $rook{$key};
+				print OUT3 $bishop{$key};
+				print OUT4 $knight{$key};
+			}
 		}
 		print OUT1 "\n";
 		print OUT2 "\n";
@@ -164,10 +170,17 @@ sub blackMatrix {
 		if ($k == 8) { $outk = "h"; }
 			my $key = join "", $outk,$i;
 						
-			print OUT1 $queen{$key}.",";
-			print OUT2 $rook{$key}.",";
-			print OUT3 $bishop{$key}.",";
-			print OUT4 $knight{$key}.",";
+			unless( $k == 8) {
+				print OUT1 $queen{$key}.",";
+				print OUT2 $rook{$key}.",";
+				print OUT3 $bishop{$key}.",";
+				print OUT4 $knight{$key}.",";
+			} else {
+				print OUT1 $queen{$key};
+				print OUT2 $rook{$key};
+				print OUT3 $bishop{$key};
+				print OUT4 $knight{$key};
+			}
 		}
 		print OUT1 "\n";
 		print OUT2 "\n";
