@@ -5,7 +5,10 @@
 #	6/29/2014
 #	Author: Danny Antaki
 #
-#	Version 1.0
+#	Version 1.1
+#
+#	Update 1.1 
+#		Fixed Black castling bug
 #
 #	Parses PGN scripts and outputs position frequencies for queen, rook, bishop,and knight
 #		pieces for each win, draw, or loss game playing as white or black.
@@ -141,12 +144,12 @@ my $gameResult;
 				$move =~ s/ //g;
 				
 				if ($move eq 'O-O'){
-					my $key = "g7";
+					my $key = "g8";
 					$rWin{$key}++;
 				}
 				
 				if($move eq 'O-O-O'){
-					my $key = "c7";
+					my $key = "c8";
 					$rWin{$key}++;
 				}
 				
